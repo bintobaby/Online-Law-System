@@ -1,0 +1,88 @@
+﻿@model MVCBarcounsil.Models.caseupdates
+
+@{
+    ViewBag.Title = "viewupdateclient";
+    Layout = "~/Views/Shared/ClientsMaster.cshtml";
+}
+
+
+<div class="col-md-12" style="text-align:center">
+     <h2 style="text-align:center">Case Updates</h2>
+</div>
+<div class="col-md-12" style="text-align:right">
+    
+           
+         
+      
+</div>
+<div class="col-md-12" style="text-align:right;height:20px">
+    
+           
+         
+      
+</div>
+
+<table class="table" style="width:100%;background-color:#ebe7e7">
+    <tr style="background-color:lightblue">
+        <th>Time</th>
+        <th>Description</th>
+      
+        
+      
+      @*  <th>Identification Mark</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>BloodGroup</th>
+        <th>Age</th>
+        <th>Hair Color</th>
+        <th>Eye Color</th>
+        <th>Rigorous</th>
+        <th>Status</th>
+        <th></th>*@
+        
+   </tr>
+        @for (int i = 0; i < Model.dt.Rows.Count;i++ )
+        {
+           <tr>
+           
+          
+                 <td style="vertical-align:middle">@Model.dt.Rows[i]["timestap"].ToString()</td>
+             <td style="vertical-align:middle">@Model.dt.Rows[i]["description"].ToString()</td>
+              @*  <td>@Model.dt.Rows[i]["idfmark"].ToString()</td>
+                <td>@Model.dt.Rows[i]["age"].ToString()</td>
+                <td>@Model.dt.Rows[i]["bloodgroup"].ToString()</td>
+                <td>@Model.dt.Rows[i]["haircolour"].ToString()</td>
+                <td>@Model.dt.Rows[i]["eyecolour"].ToString()</td>
+                <td>@Model.dt.Rows[i]["rigorous"].ToString()</td>
+                <td>@Model.dt.Rows[i]["status"].ToString()</td>*@
+              
+              
+            
+              @*  <td style="vertical-align:middle">
+               
+                      
+                @Html.ActionLink("Update Case Datais", "updatecase", new { id=Model.dt.Rows[i]["caseid"].ToString()}, new  { @class = "btn btn-danger"})
+           
+
+            </td>
+               
+             <td style="vertical-align:middle">
+               
+                      
+                @Html.ActionLink("View Details", "viewcase", new { id=Model.dt.Rows[i]["caseid"].ToString()}, new  { @class = "btn btn-danger"})
+           
+
+            </td>*@
+         </tr>
+        }
+
+   
+</table>
+
+
+
+
+
+
+
+

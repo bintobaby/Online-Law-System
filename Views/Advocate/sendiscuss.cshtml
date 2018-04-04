@@ -1,0 +1,94 @@
+﻿@model MVCBarcounsil.Models.discinfo
+
+@{
+    ViewBag.Title = "sendiscuss";
+    Layout = "~/Views/Shared/AdvocateMaster.cshtml";
+}
+
+
+
+<h2 style="text-align:center">Send Message</h2>
+
+@using (Html.BeginForm("discins", "Advocate", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend></legend>
+
+        <div class="col-md-3"> </div>
+    <div class="col-md-6"> 
+    <fieldset>
+        <legend></legend>
+      
+        
+       <div class="col-md-12">
+              <div class="editor-label">
+          
+           
+               <div class="col-md-12" style="height:10px"></div>
+        </div>
+            <div class="editor-field">
+           
+         @Html.HiddenFor(m => Model.toid, new { @id = "LoginName", @class = "form-control",@readonly="readonly", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;background-color:#d1c4c2;" })
+                
+
+
+       
+             </div>
+            
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.toname)
+               <div class="col-md-12" style="height:10px"></div>
+        </div>
+        <div class="editor-field">
+              @Html.TextAreaFor(m => Model.toname, new { @id = "LoginName",@readonly="readonly", @class = "form-control", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;" })
+            @Html.ValidationMessageFor(model => model.toname,null, new { style = "color: red" })
+               <div class="col-md-12" style="height:10px"></div>
+        </div>
+
+            <div class="editor-label">
+            @Html.LabelFor(model => model.message)
+               <div class="col-md-12" style="height:10px"></div>
+        </div>
+        <div class="editor-field">
+              @Html.TextAreaFor(m => Model.message, new { @id = "LoginName", @class = "form-control", @type="text", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;height:200px" })
+            @Html.ValidationMessageFor(model => model.message,null, new { style = "color: red" })
+               <div class="col-md-12" style="height:10px"></div>
+        </div>
+
+
+           
+       
+
+      
+     
+          <div class="col-md-12" style="height:50px"> </div>
+           <input type="submit" class="btn btn-success" style="width:100%" value="Submit" />
+     
+
+     
+
+        
+</div>
+    
+
+        <div class="col-md-12" style="height:70px"> </div>
+
+      
+    </fieldset>
+  </div>
+     
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

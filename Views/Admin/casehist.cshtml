@@ -1,0 +1,110 @@
+﻿@model MVCBarcounsil.Models.caseinfo
+
+@{
+    ViewBag.Title = "casehist";
+    Layout = "~/Views/Shared/Admin.cshtml";
+}
+
+
+<div class="col-md-12" style="text-align:center">
+     <h2 style="text-align:center">Case History</h2>
+</div>
+<div class="col-md-12" style="text-align:right">
+    
+           
+         
+      
+</div>
+<div class="col-md-12" style="text-align:right;height:20px">
+    
+           
+         
+      
+</div>
+
+<table class="table" style="width:100%;background-color:#ebe7e7">
+    <tr style="background-color:lightblue">
+        <th>Client</th>
+        <th>Name</th>
+         <th>Advocate</th>
+        <th>Name</th>
+        <th>Category</th>
+        <td>Court</td>
+       
+        <th>Description </th>
+         <th>Fee</th>
+         <th>Date</th>
+         <th>Status</th>
+         <th>Case Status</th>
+         <th>Payment</th>
+        
+        
+        <th></th>
+      @*  <th>Identification Mark</th>
+        <th>Height</th>
+        <th>Weight</th>
+        <th>BloodGroup</th>
+        <th>Age</th>
+        <th>Hair Color</th>
+        <th>Eye Color</th>
+        <th>Rigorous</th>
+        <th>Status</th>
+        <th></th>*@
+        
+   </tr>
+        @for (int i = 0; i < Model.dt.Rows.Count;i++ )
+        {
+           <tr>
+           
+            <td style="vertical-align:middle"><img class="img-thumbnail" width="100" height="100" src="@Url.Action(@Model.dt.Rows[i]["cliimg"].ToString())" /></td>
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["clientname"].ToString()</td>
+
+                <td style="vertical-align:middle"><img class="img-thumbnail" width="100" height="100" src="@Url.Action(@Model.dt.Rows[i]["advimg"].ToString())" /></td>
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["advname"].ToString()</td>
+     
+     
+           <td style="vertical-align:middle">@Model.dt.Rows[i]["category"].ToString()</td>
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["court"].ToString()</td>
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["description"].ToString()</td>
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["fee"].ToString()</td>
+                 <td style="vertical-align:middle">@Model.dt.Rows[i]["date"].ToString()</td>
+             <td style="vertical-align:middle">@Model.dt.Rows[i]["status"].ToString()</td>
+                <td style="vertical-align:middle">@Model.dt.Rows[i]["cstatus"].ToString()</td>
+                <td style="vertical-align:middle">@Model.dt.Rows[i]["feestatus"].ToString()</td>
+              @*  <td>@Model.dt.Rows[i]["idfmark"].ToString()</td>
+                <td>@Model.dt.Rows[i]["age"].ToString()</td>
+                <td>@Model.dt.Rows[i]["bloodgroup"].ToString()</td>
+                <td>@Model.dt.Rows[i]["haircolour"].ToString()</td>
+                <td>@Model.dt.Rows[i]["eyecolour"].ToString()</td>
+                <td>@Model.dt.Rows[i]["rigorous"].ToString()</td>
+                <td>@Model.dt.Rows[i]["status"].ToString()</td>*@
+              
+              
+            
+            @*    <td style="vertical-align:middle">
+               
+                      
+                @Html.ActionLink("Register Case", "regcase", new { id=Model.dt.Rows[i]["caseid"].ToString()}, new  { @class = "btn btn-danger"})
+           
+
+            </td>*@
+               
+              @*  <td style="color:red";>
+               
+                      
+                @Html.ActionLink("Reject", "rejectclient", new { id=Model.dt.Rows[i]["clid"].ToString()}, new  { @class = "btn btn-danger"})
+           
+
+            </td>*@
+         </tr>
+        }
+
+   
+</table>
+
+
+
+
+
+
+

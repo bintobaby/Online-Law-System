@@ -1,0 +1,59 @@
+﻿@model MVCBarcounsil.Models.search
+
+@{
+    ViewBag.Title = "lawsearch";
+    Layout = "~/Views/Shared/_LayoutPage4.cshtml";
+}
+
+<div class="col-md-12" style="text-align:center">
+    <h2 style="text-align:center">Law Description</h2>
+</div>
+<div class="col-md-12" style="text-align:right">
+
+
+
+
+</div>
+<div class="col-md-12" style="text-align:right;height:20px">
+
+
+
+
+</div>
+
+<table class="table" style="width:100%;background-color:#ebe7e7">
+    <tr style="background-color:lightblue">
+        <th>Section Number</th>
+        <th>Description</th>
+        
+
+
+
+       
+    </tr>
+    @for (int i = 0; i < Model.dt.Rows.Count; i++)
+    {
+        <tr>
+
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["sectionno"].ToString()</td>
+            <td style="vertical-align:middle">@Model.dt.Rows[i]["description"].ToString()</td>
+
+
+            
+
+
+           
+
+
+        </tr>
+    }
+
+
+</table>
+
+
+
+
+
+
+
