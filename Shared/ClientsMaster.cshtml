@@ -1,0 +1,265 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>LAW HELPER</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Legalized Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="~/css/bootstrap.css" rel='stylesheet' type='text/css' />
+<link href='//fonts.googleapis.com/css?family=Open+Sans:700,700italic,800,300,300italic,400italic,400,600,600italic' rel='stylesheet' type='text/css'>
+<!--Custom-Theme-files-->
+   <link href="~/css/owl.carousel.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="~/css/style.css" rel='stylesheet' type='text/css' />	
+	<script src="~/js/jquery.min.js"> </script>
+<!--/script-->
+<script type="text/javascript" src="~/js/move-top.js"></script>
+<script type="text/javascript" src="~/js/easing.js"></script>
+    <script src="~/Scripts/jquery-1.8.2.js" type='text/javascript'></script>    
+<script src="~/Scripts/jquery.validate.js" type='text/javascript'>         </script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>
+   
+
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+        });
+    });
+</script>
+<!--gallery-->
+   <script src="~/js/jquery.chocolat.js"></script>
+		<link rel="stylesheet" href="~/css/chocolat.css" type="text/css" media="all" />
+		<!--light-box-files -->
+		<script type="text/javascript">
+		    $(function () {
+		        $('#example1 a').Chocolat();
+		    });
+		</script>
+		<script type="text/javascript">
+		    $(function () {
+		        $('#portfolio a').Chocolat();
+		    });
+		</script>
+      <style>
+        .dropbtn {
+    background-color: #310a01;
+    color:white;
+   text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+  
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+
+    display: none;
+    position: absolute;
+    background-color: #310a01;
+    min-width: 160px;
+    border-bottom-color:#310a01;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+        .dropdownhover {
+            color:yellow;
+        }
+/* Links inside the dropdown */
+.dropdown-content a {
+     text-decoration: none;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+        border-bottom-color: #310a01;
+    border-bottom-style: double;
+    border-radius: unset;
+   
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #310a01}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #310a01;
+}
+    </style>
+    
+</head>
+<body style="background-color:#c9c9c9">
+    <div id="home" class="header">
+		<div class="header-top">
+			<div class="container">
+				<span class="menu"></span>
+				<div class="top-menu">
+				<ul class="cl-effect-16">
+                     <li>@Html.ActionLink("Home", "Home", "Site")</li>
+                    <li>@Html.ActionLink("VIEW Advocates","advocatesearch","Client")</li> 
+                      <li>@Html.ActionLink("Notifications","notifs","Client")</li> 
+                 
+						
+
+                     <div class="dropdown">
+  <button class="dropbtn cl-effect-16">Cases</button>
+                      <div class="dropdown-content">
+                            <a href="#" style="color:red">.....</a>
+                           <li>@Html.ActionLink("Review Case","reviewcase","Client")</li> 
+                              <li>@Html.ActionLink("Case Detalis","caselistclient","Client")</li> 
+                           
+                        
+                           
+                        </div>
+                      </div>
+                    
+					 @*<button class="dropbtn cl-effect-16"></button>
+
+                     <li>@Html.ActionLink("Communicate","getadv","Client")</li> *@
+                    <div class="dropdown">
+  <button class="dropbtn cl-effect-16">Appointments</button>
+                      <div class="dropdown-content">
+
+                         
+                            <a href="#" style="color:red">.....</a>
+                            <li>@Html.ActionLink("ADD Appointments","getadvappointment","Client")</li> 
+                            <li>@Html.ActionLink("VIEW Appointments","viewappoi","Client")</li> 
+                           
+                          
+                        </div>
+                      </div>
+                     <button class="dropbtn cl-effect-16"></button>
+                    
+                     
+
+                        
+                     
+                      <button class="dropbtn cl-effect-16"></button>
+					
+						<li>@Html.ActionLink("LOGOUT","Home","Site")</li>
+						   <i class="fa fa-user" style="color:red"> <a style="flex-align:end" class="fa fa-user" href="#" >Client</a></i>
+					</ul>
+				</div>
+            <!-- script-for-menu -->
+				<script>
+				    $("span.menu").click(function () {
+				        $(".top-menu").slideToggle("slow", function () {
+				            // Animation complete.
+				        });
+				    });
+			</script>
+			<div class="clearfix"></div>
+	<!--End-top-nav-script-->
+			</div>
+		</div>
+         <div class="header-middle" style="background-color:lightgray;padding:0px">
+		 			<div class="container">
+				<div class="logo">
+					<a href="index.html"><h1 style="font-size:26px">LAW HELPER</h1></a>
+				</div>
+				<d
+				</div>
+				<d
+				</div>
+				<div class="header-top-right">
+					<form>
+                        <asp:Label ID="Label1" Font-Bold="True" runat="server" Text="Administrator" ForeColor="Red"></asp:Label>
+					</form>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			</div>
+	
+       </div>
+	 
+
+<!--/contact-->
+    
+    <div class="container" style="min-height:600px">
+       @RenderSection("scripts",required: false)
+     @RenderBody() 
+    </div>
+    
+ <div class="footer">
+		    <div class="container">
+				 <div class="footer-top">
+				    <div class="col-md-4 footer-grid">
+					     <h4>Get Free Consultation 
+							 90</li>
+							 <li>Available 24/7</li>
+						 </ul>
+				    </div>
+					  <div class="col-md-4 footer-grid">
+					     <h4>Message Us Now</h4>
+				            <ul class="bottom">
+						     <li><i class="glyphicon glyphicon-home"></i>Available 24/7 </li>
+							 <li><i class="glyphicon glyphicon-envelope"></i><a href="mailto:info@example.com">mail@example.com</a></li>
+						   </ul>
+				    </div>
+					<div class="col-md-4 footer-grid">
+					     <h4>Address Location</h4>
+				           <ul class="bottom">
+						     <li><i class="glyphicon glyphicon-map-marker"></i>2901 Glassgow Road, WA 98122-1090 </li>
+							 <li><i class="glyphicon glyphicon-earphone"></i>phone: (888) 123-456-7899 </li>
+						   </ul>
+				    </div>
+					<div class="clearfix"> </div>
+				 </div>
+			</div>
+	     </div>
+		<div class="copy">
+		     <p>&copy; 2016 Legalized. All Rights Reserved | Design By <a href="http://w3layouts.com/">W3layouts</a></p>
+		</div>
+		<!--//footer-->
+			<!--start-smoth-scrolling-->
+						<script type="text/javascript">
+						    $(document).ready(function () {
+						        /*
+                                var defaults = {
+                                    containerID: 'toTop', // fading element id
+                                    containerHoverID: 'toTopHover', // fading element hover id
+                                    scrollSpeed: 1200,
+                                    easingType: 'linear' 
+                                };
+                                */
+
+						        $().UItoTop({ easingType: 'easeOutQuart' });
+
+						    });
+								</script>
+		<a href="#home" id="toTop" class="scroll" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+
+
+</body>
+</html>
+
+
+

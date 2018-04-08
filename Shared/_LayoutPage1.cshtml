@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+    <title>Introspect by TEMPLATED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/main.css")" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+
+            <a href="@Url.Content("~/Content/index.html")" class="logo">LAW  HELPER</a>
+
+           
+                    @Html.ActionLink("Home", "Home", "Site")
+                    @Html.ActionLink("LAW SEARCH", "serach", "Site")
+                    @Html.ActionLink("UPDATES", "updates", "Site")
+                  
+                    @Html.ActionLink("SIGNUP", "register", "Site")
+                    @Html.ActionLink("LOGIN", "login", "Site")
+                    @Html.ActionLink("CONTACT", "contact", "Site")
+
+
+             
+                @*<a href="@Url.Content("~/Content/index.html")">Home</a>
+            <a href="@Url.Content("~/Content/search.html")">Law Search</a>
+            <a href="@Url.Content("~/Content/updates.html")">Updates</a>
+            <a href="@Url.Content("~/Content/csearch.html")">Criminal Search</a>
+            <a href="@Url.Content("~/Content/contacts.html")">Contact</a>
+            <a href="@Url.Content("~/Content/login.html")">Login</a>*@
+
+            </div>
+            </div>
+    </header>
+    <a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+    <!-- Banner -->
+    <section id="banner">
+
+        <div class="inner">
+            <h1>
+                LAW HELPER: <span>
+                    <br />A COMPLETE SOLUTION FOR CITIZENS OF INDIA <br />
+                </span>
+            </h1>
+
+
+
+            <ul class="actions">
+                <li><a href="#" class="button alt">Get Started</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- One -->
+    <section id="one">
+        <div class="inner">
+            <header>
+                <h2>Law & Justice</h2>
+            </header>
+            <p>The Constitution of India guarantees protection of life and personal liberty to one and all. It provides adequate safeguards to fundamental rights against arbitrary decisions. This section has detailed information about various legislations, rules and regulations, legal institutions, commissions and tribunals. You can also get information about the Supreme Court, High Courts, Subordinate Courts, Legal Aid, Profession, Alternative Dispute Resolution (ADR) etc. Details of online services and free legal aid schemes are also available. Related documents and forms are provided in this section.</p>
+            <ul class="actions">
+                <li><a href="#" class="button alt">Learn More</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Two -->
+    <section id="two">
+        <div class="inner">
+            <article>
+                <div class="content">
+                    <header>
+                        <h3>LAWS</h3>
+                    </header>
+                    <div class="image fit">
+                        <img src="@Url.Content("~/Content/images/law1.jpg" )" alt="" />
+                    </div>
+                    <p>Users can find various labour laws provided by the Ministry of Labour and Employment. Information about laws related to industrial relations, wages, working hours, conditions of service and employment, equality and empowerment of women etc. is given. The Trade Unions Act, Industrial Employment Act and Industrial Disputes Act are given.</p>
+                </div>
+            </article>
+            <article class="alt">
+                <div class="content">
+                    <header>
+                        <h3>Justice</h3>
+                    </header>
+                    <div class="image fit">
+                        <img src="@Url.Content("~/Content/images/law5.jpg" )" alt="" />
+                    </div>
+                    <p>Get information about the Legislative Department of Ministry of Law and Justice. Detailed information pertaining to functions and organizational set up of the department is given. Manual of election law and reports of electoral reforms are also provided. Details of legislative bodies are provided. A list of Central Acts is given. </p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Three -->
+    <section id="three"></section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <section id="footer">
+        <div class="inner">
+            <header>
+                <h2>Online Law helper</h2>
+            </header>
+
+            <ul class="icons">
+                <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+                <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                <li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+            </ul>
+            <!--<form method="post" action="#">
+                <div class="field half first">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Send Message" class="alt" /></li>
+                </ul>
+            </form>-->
+            <div class="copyright">
+                &copy; Untitled Design: <a href="https://templated.co/">TEMPLATED</a>. Images <a href="https://unsplash.com/">Unsplash</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

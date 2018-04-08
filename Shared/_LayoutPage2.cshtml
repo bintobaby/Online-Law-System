@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+
+
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+
+
+    <title>Introspect by TEMPLATED</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/assets/css/main.css")" />
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
+
+
+            <a href="@Url.Content("~/Content/index.html")" class="logo">LAW  HELPER</a>
+
+
+            @Html.ActionLink("Home", "Home", "Site")
+            @Html.ActionLink("LAW SEARCH", "serach", "Site")
+            @Html.ActionLink("UPDATES", "updates", "Site")
+            
+            @Html.ActionLink("SIGNUP", "register", "Site")
+            @Html.ActionLink("LOGIN", "login", "Site")
+            @Html.ActionLink("CONTACT", "contact", "Site")
+
+
+
+            @*<a href="@Url.Content("~/Content/index.html")">Home</a>
+                <a href="@Url.Content("~/Content/search.html")">Law Search</a>
+                <a href="@Url.Content("~/Content/updates.html")">Updates</a>
+                <a href="@Url.Content("~/Content/csearch.html")">Criminal Search</a>
+                <a href="@Url.Content("~/Content/contacts.html")">Contact</a>
+                <a href="@Url.Content("~/Content/login.html")">Login</a>*@
+
+        </div>
+        
+    </header>
+
+
+   
+
+            
+            
+
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>
+
+        

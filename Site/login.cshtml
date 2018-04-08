@@ -1,0 +1,86 @@
+﻿@model MVCBarcounsil.Models.login
+
+@{
+    ViewBag.Title = "login";
+    Layout = "~/Views/Shared/Sites.cshtml";
+}
+
+@using (Html.BeginForm("validatelogin", "Site", FormMethod.Post))
+{
+    @Html.ValidationSummary(true)
+
+	     	<div class="container">
+                 <div class="col-md-12" style="height:200px"> </div>
+                 <div class="col-md-4"></div>
+                <div class="banner">
+
+                    <div class="col-md-4" style="background-color:rgba(145, 145, 138, 0.8)">
+                        <div class="col-md-12">
+
+
+                            <div class="editor-label">
+
+                                @Html.LabelFor(model => model.username)
+                                <div class="col-md-12" style="height:10px"></div>
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(m => Model.username, new { @id = "LoginName", @class = "form-control", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;" })
+                                @Html.ValidationMessageFor(model => model.username, null, new { style = "color: blue" })
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.password)
+                                <div class="col-md-12" style="height:10px"></div>
+                            </div>
+                            <div class="editor-field">
+                                @Html.TextBoxFor(m => Model.password, new { @id = "LoginName", @type = "password", @class = "form-control", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;" })
+                                @Html.ValidationMessageFor(model => model.password, null, new { style = "color: blue" })
+                            </div>
+                            <div class="editor-label">
+
+
+                                <div class="col-md-12" style="height:10px"></div>
+                            </div>
+
+
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
+                                <div class="col-md-12" style="height:20px"> </div>
+                                <input type="submit" class="btn btn-success" style="width:100%" value="Submit" />
+                            </div>
+                            <div class="col-md-12" style="height:50px"> </div>
+                            @*     @Html.TextBoxFor(m => Model.message,  new { @id = "LoginName", @class = "form-control", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;color:red;background-color: transparent" })*@
+
+
+                        </div>
+                    </div>
+                    <div class="col-d-4"></div>
+                    <!--banner-->
+                    <script src="~/js/responsiveslides.min.js"></script>
+                    <script>
+                        // You can also use "$(window).load(function() {"
+                        $(function () {
+                            // Slideshow 4
+                            $("#slider4").responsiveSlides({
+                                auto: true,
+                                pager: true,
+                                nav: true,
+                                speed: 500,
+                                namespace: "callbacks",
+                                before: function () {
+                                    $('.events').append("<li>before event fired.</li>");
+                                },
+                                after: function () {
+                                    $('.events').append("<li>after event fired.</li>");
+                                }
+                            });
+
+                        });
+
+                    </script>
+                </div>
+		 </div>
+}
+
+
+

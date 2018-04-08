@@ -1,0 +1,88 @@
+﻿@model MVCBarcounsil.Models.advinfo
+
+@{
+    ViewBag.Title = "advocatesearch";
+    Layout = "~/Views/Shared/ClientsMaster.cshtml";
+}
+@{
+    var listItems1 = new List<System.Web.UI.WebControls.ListItem> { new System.Web.UI.WebControls.ListItem { Text = "Kasaragod", Value = "Kasaragod" }, new System.Web.UI.WebControls.ListItem { Text = "Kannur", Value = "Kannur" }, new System.Web.UI.WebControls.ListItem { Text = "wayanad", Value = "wayanad" }, new System.Web.UI.WebControls.ListItem { Text = "Kozhikode", Value = "Kozhikode" }, new System.Web.UI.WebControls.ListItem { Text = "Palakkadu", Value = "Palakkadu" }, new System.Web.UI.WebControls.ListItem { Text = "Thrissur", Value = "Thrissur" }, new System.Web.UI.WebControls.ListItem { Text = "Malappuram", Value = "Malappuram" }, new System.Web.UI.WebControls.ListItem { Text = "Ernakulam", Value = "Ernakulam" }, new System.Web.UI.WebControls.ListItem { Text = "Idukki", Value = "Idukki" }, new System.Web.UI.WebControls.ListItem { Text = "Kottayam", Value = "Kottayam" }, new System.Web.UI.WebControls.ListItem { Text = "Alappuzha", Value = "Alappuzha" }, new System.Web.UI.WebControls.ListItem { Text = "Pathanamthitta", Value = "Pathanamthitta" }, new System.Web.UI.WebControls.ListItem { Text = "Kollam", Value = "Kollam" }, new System.Web.UI.WebControls.ListItem { Text = "Thiruvananthapuram", Value = "Thiruvananthapuram" } };
+}
+@using (Html.BeginForm("advocatelist", "Client", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.ValidationSummary(true)
+
+
+
+<div class="banner">
+    <div class="container">
+        <div class="col-md-12">
+            <h2 style="text-align:center;color:bisque">Search Advocate</h2>
+        </div>
+        <br>
+        <br>
+        <br>
+
+        <div class="col-md-3"></div>
+
+        <div class="col-md-6" style="background-color:rgba(145, 145, 138, 0.8)">
+            <div class="col-md-12">
+               
+                <div class="editor-label">
+                    @Html.LabelFor(model => model.district)
+                    <div class="col-md-12" style="height:10px"></div>
+                </div>
+                <div class="editor-field">
+
+                    @Html.DropDownListFor(model => model.district, new SelectList(listItems1), "-- Select ---", new { @id = "LoginName", @class = "form-control", @style = "float:left;margin-right:10px;margin-top:-5px;border-color:green;" })
+                    @Html.ValidationMessageFor(model => model.district, null, new { style = "color: blue" })
+                </div>
+
+                
+
+
+
+
+                
+
+                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                    <div class="col-md-12" style="height:20px"> </div>
+                    <input type="submit" class="btn btn-success" style="width:100%" value="Submit" />
+                </div>
+
+
+            </div>
+        </div>
+        <div class="col-d-3"></div>
+        <!--banner-->
+        <script src="~/js/responsiveslides.min.js"></script>
+        <script>
+			     // You can also use "$(window).load(function() {"
+			     $(function () {
+			         // Slideshow 4
+			         $("#slider4").responsiveSlides({
+			             auto: true,
+			             pager: true,
+			             nav: true,
+			             speed: 500,
+			             namespace: "callbacks",
+			             before: function () {
+			                 $('.events').append("<li>before event fired.</li>");
+			             },
+			             after: function () {
+			                 $('.events').append("<li>after event fired.</li>");
+			             }
+			         });
+
+			     });
+
+        </script>
+    </div>
+    @section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+
+    }
+</div>
+
+}
+
