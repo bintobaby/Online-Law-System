@@ -1,0 +1,45 @@
+<html>
+<head>
+<script>
+var x;
+function sub1()
+{
+x=document.binto.name.value;
+if(x=="")
+	{
+alert("Enter name");
+return false;
+	}
+	var y=document.binto.password.value;
+	if(y.length<10)
+	 {
+	 alert "Weak Password";
+	 return false;
+	 }
+	 var b=document.binto.password.value;
+	 var z=document.binto.password1.value;
+	 if(b!=z)
+	 {
+	 alert "Password not match";
+	 return false;
+	 }
+
+}
+</script>
+</head>
+<body>
+<form name="binto" onsubmit="sub1()">
+Name:<input type="text" name="name"/>
+
+password<input type="password" name="password"/>
+Re-type password<input type="password" name="password1"/>
+
+<input type="Submit" value="Click"/>
+
+
+
+
+</form>
+
+</body>
+</html>
